@@ -23,7 +23,7 @@ struct block_meta{
 #define BLOCK_META_SIZE sizeof(struct block_meta)
 
 /*
- * Calculates the block level nedded to store the requested data (n) allong with any block meta info
+ * Calculates the block level nedded to store the requested data (n) along with any block meta info
  */
 static char calc_block_order(size_t n){
   
@@ -127,7 +127,7 @@ static struct block_meta* find_free_block(char kval){
 /*
  * Extends the heap
  */
-int get_more_space(void){
+static int get_more_space(void){
   
   struct block_meta* block_meta = sbrk(0);
   
